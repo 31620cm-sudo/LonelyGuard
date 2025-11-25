@@ -1,5 +1,3 @@
-# main.py
-
 from sensors.motion import read_motion
 from sensors.light import read_light
 from sensors.temperature import read_temperature
@@ -30,7 +28,8 @@ def run():
         "risk_score": risk
     }
 
-    json_path = os.path.join("4_data", "daily.json")
+    # 숫자 제거 후 정식 경로
+    json_path = os.path.join("data", "daily.json")
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
