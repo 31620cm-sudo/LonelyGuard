@@ -5,13 +5,20 @@
     <title>LonelyGuard Dashboard</title>
 </head>
 <body>
+
     <h1>LonelyGuard - Daily Report</h1>
 
     <p>📌 Motion: {{ data.motion }}</p>
-    <p>📌 Light: {{ data.light }}</p>
-    <p>📌 Temperature: {{ data.temperature }}°C</p>
-    <p>📌 Humidity: {{ data.humidity }}%</p>
+    <p>💡 Light: {{ data.light }}</p>
+    <p>🌡 Temperature: {{ data.temperature }}°C</p>
+    <p>💧 Humidity: {{ data.humidity }}%</p>
 
     <h2>🔥 Risk Score: {{ data.risk_score }}</h2>
+
+    <hr>
+
+    <h2>🤖 AI 위험 분석</h2>
+    <p>{{ ai_summary }}</p>   <!-- 여기가 핵심! -->
+
 </body>
 </html>
